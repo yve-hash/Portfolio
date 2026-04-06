@@ -1,0 +1,20 @@
+:root {
+  --moss: #5e6737;
+  --terracotta: #c05e3e;
+  --parchment: #f4efe1;
+  --harvest: #d99036;
+  --oak: #4a3728;
+}
+
+
+.bg-parchment { background-color: var(--parchment); }
+.bg-moss { background-color: var(--moss); }
+.bg-terracotta { background-color: var(--terracotta); }
+.bg-harvest { background-color: var(--harvest); }
+
+.text-oak { color: var(--oak); }
+.text-parchment { color: var(--parchment); }
+.text-terracotta { color: var(--terracotta); }
+.text-moss { color: var(--moss); }
+
+.border-moss { border-color: var(--moss); }
