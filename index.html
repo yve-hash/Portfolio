@@ -1,20 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yvgeni Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yvgeni Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-parchment">
-    <div id="root"></div>
 
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<div id="root"></div>
 
-    <script type="text/babel" src="App.js"></script>
+<script type="text/babel">
+
+const App = () => {
+  return (
+    <div className="min-h-screen">
+
+      {/* NAVBAR */}
+      <nav className="bg-moss text-parchment px-6 py-4 flex justify-between items-center shadow-md sticky top-0">
+        <h1 className="font-bold text-xl">YL</h1>
+        <div className="space-x-4">
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#skills" className="hover:underline">Skills</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <header className="flex flex-col items-center justify-center text-center py-16 bg-moss text-parchment">
+        
+        <img 
+          src="https://via.placeholder.com/150"
+          className="w-32 h-32 rounded-full border-4 border-parchment shadow-lg mb-4"
+        />
+
+        <h1 className="text-4xl font-bold font-serif">
+          Yvgeni Laberinto
+        </h1>
+
+        <p className="mt-2 italic">
+          IT Student | Web Developer
+        </p>
+
+      </header>
+
+      {/* MAIN */}
+      <main className="max-w-4xl mx-auto px-6 py-12 space-y-10">
+
+        {/* ABOUT */}
+        <section id="about" className="p-6 bg-white rounded-xl shadow border">
+          <h2 className="text-2xl text-terracotta font-serif mb-3">About Me</h2>
+          <p className="text-oak">
+            I build clean and functional web applications using React and Tailwind.
+          </p>
+        </section>
+
+        {/* SKILLS */}
+        <section id="skills" className="p-6 bg-white rounded-xl shadow border">
+          <h2 className="text-2xl text-terracotta font-serif mb-3">Skills</h2>
+          
+          <div className="flex flex-wrap gap-2">
+            <span className="px-4 py-1 rounded-full bg-harvest text-white">React</span>
+            <span className="px-4 py-1 rounded-full bg-harvest text-white">JavaScript</span>
+            <span className="px-4 py-1 rounded-full bg-harvest text-white">Tailwind</span>
+          </div>
+        </section>
+
+        {/* PROJECTS / IMAGE BOX */}
+        <section className="p-6 bg-white rounded-xl shadow border">
+          <h2 className="text-2xl text-terracotta font-serif mb-3">Projects</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div className="border rounded-lg overflow-hidden shadow">
+              <img src="https://via.placeholder.com/400x200" className="w-full"/>
+              <div className="p-3">
+                <p className="font-bold">Portfolio Website</p>
+                <p className="text-sm text-gray-500">React + Tailwind</p>
+              </div>
+            </div>
+
+            <div className="border rounded-lg overflow-hidden shadow">
+              <img src="https://via.placeholder.com/400x200" className="w-full"/>
+              <div className="p-3">
+                <p className="font-bold">UI Design Project</p>
+                <p className="text-sm text-gray-500">Frontend Focus</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* CONTACT */}
+        <section id="contact" className="p-6 bg-white rounded-xl shadow border">
+          <h2 className="text-2xl text-terracotta font-serif mb-3">Contact</h2>
+
+          <input className="w-full p-2 border rounded mb-2" placeholder="Email"/>
+          <textarea className="w-full p-2 border rounded mb-2" placeholder="Message"></textarea>
+
+          <button className="bg-terracotta text-white px-4 py-2 rounded">
+            Send
+          </button>
+        </section>
+
+      </main>
+
+      {/* FOOTER */}
+      <footer className="text-center py-6 text-gray-500 border-t">
+        © 2026 Yvgeni Portfolio
+      </footer>
+
+    </div>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+</script>
+
 </body>
 </html>
